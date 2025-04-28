@@ -1,0 +1,10 @@
+[Unit]
+Description=Run TurboSwitcher every 5 seconds
+
+[Timer]
+OnBootSec=10
+OnUnitActiveSec=5
+
+[Install]
+WantedBy=default.target
+

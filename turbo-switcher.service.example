@@ -1,0 +1,7 @@
+[Unit]
+Description=Enable turbo mode based on AC availability
+
+[Service]
+Type=simple
+ExecStart=/home/user/.config/systemd/user/scripts/turbo-switcher.sh
+User=root
