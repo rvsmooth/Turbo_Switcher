@@ -1,0 +1,7 @@
+[Unit]
+Description=Enable turbo mode based on ac availability
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/turbo-switcher.sh
+User=root

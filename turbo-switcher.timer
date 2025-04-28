@@ -1,5 +1,5 @@
 [Unit]
-Description=Run TurboSwitcher every 5 seconds
+Description=Run Turbo Switcher every 5 seconds
 
 [Timer]
 OnBootSec=10

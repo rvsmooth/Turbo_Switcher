@@ -6,19 +6,11 @@ echo "Welcome to TurboSwitcher installer"
 sleep 1
 
 cd $SCRIPT_DIR
-sudo cp turbo-switcher.timer /etc/systemd/system/
+
+echo "Copying service files for TurboSwitcher"
+sudo cp turbo-switcher.timer turbo-switcher.service /etc/systemd/system/
 sudo cp turbo-switcher.sh /usr/local/bin/
 
-echo "Creating systemd service..."
-echo "[Unit]
- Description=Enable turbo mode based on ac availability
-
-[Service]
-  Type=simple
-  ExecStart=/usr/local/bin/turbo-switcher.sh
-  User=root
-  " | sudo tee /etc/systemd/system/turbo-switcher.service
-
-echo "Enabling turbo-switcher.service"
+echo "Enabling TurboSwitcher"
 sudo systemctl daemon-reload
 sudo systemctl enable turbo-switcher.timer --now
