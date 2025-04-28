@@ -8,3 +8,11 @@ A small service I made for my friend to turn on turbo mode based on the availabi
 git clone https://github.com/rvsmooth/turbo_switcher
 cd turbo_switcher 
 bash install.sh 
+``` 
+
+## To uninstall 
+``` 
+sudo systemctl stop tubo-switcher.timer
+sudo systemctl disable tubo-switcher.timer
+sudo rm /usr/local/bin/turbo-switcher.sh /etc/systemd/system/turbo-switcher* 
+```
